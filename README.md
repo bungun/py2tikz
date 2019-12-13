@@ -1,6 +1,13 @@
 # py2tikz
 Utilities to write TeX/TikZ from python
 
+Generate your data in python (or wherever), specify data sources
+and plotting esthetics in a YAML file, then python or bash script
+to generate TeX source for a TikZ figure for inclusion in
+documents, or (with bash script) optionally compiled to 
+stand-alone PDF. 
+
+
 Dependencies
 ------------
 - a working TeX installation with pdflatex
