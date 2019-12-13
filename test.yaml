@@ -1,0 +1,27 @@
+plot:
+  title : '{\tt Test Plot}'
+  xlabel : iterations $k$
+  ylabel : $\|y^k - y^\star\|$
+  logx : True
+  logy : True
+  axis_x_line : 'bottom'
+  axis_y_line : 'left'
+  legend_pos : 'south east'
+  series_names: ['First', 'Second']
+  draw_legend : No 
+
+series:
+  - type : raw
+    data : test_data
+    xseries : x
+    yseries : 'y'
+    color : orange
+    marker : 'x'
+
+  - type : calc 
+    domain : [1, 5]
+    expression : x^2 - x + 4
+    color : blue 
+    marker : 'o'
+    fillcolor : green
+

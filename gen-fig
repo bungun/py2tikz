@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]; then
+    echo 1>&2 "$0: not enough arguments"
+    exit 2
+fi 
+
+python gen_fig_tex.py -i $1 -o $2 -w $3;
+pdflatex --file-line-error --synctex=1 -shell-escape $3;
+rm $3.pdf
+mv $3-figure0.pdf $3.pdf
+
+exit 0

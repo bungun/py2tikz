@@ -1,0 +1,84 @@
+subplot_meta:
+    - group_name: first
+      group_size: 3
+      group_layout: 1 by 3
+      vertical_sep: 0em
+      horizontal_sep: 0em
+      x_desc_at: edge bottom 
+      ytick_pos: null
+      width: 4cm
+      height: 4cm
+      # scaling: scale only axis
+      # anchor: null
+      # relative: null
+      # offset: null 
+      labels: [(a), (b), (c)]
+      label pos: north west
+      label_offset: 0.1cm,-0.1cm
+      label_format: bf
+
+    - group_name: second
+      group_size: 6
+      group_layout: 1 by 6
+      vertical_sep: 0em
+      horizontal_sep: 0em
+      x_desc_at: edge bottom
+      ytick_pos: right
+      width: 4cm
+      height: 2cm
+      # scaling: scale only axis 
+      anchor: north west
+      relative: first c1r1.north east # first group->col1 row1->north east
+      offset: 0.2cm,0
+      labels: [(d), (e), (f), (g), (h), (i)]
+      label_pos: north west 
+      label_offset: -0.1cm,-0.1cm
+      label_format: bf
+
+subplots:
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(2*x)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(3*x)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x+1)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x+2)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x+3)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x+4)
+        domain: [1, 5]
+  - plot: {}    
+    series:
+      - type: calc
+        expression: sqrt(x+5)
+        domain: [1, 5]
+  - plot: {ytick_distance: 1}    
+    series:
+      - type: calc
+        expression: sqrt(x+6)
+        domain: [1, 5]
+

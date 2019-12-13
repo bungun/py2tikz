@@ -1,0 +1,20 @@
+plot:
+  title : '{\tt Test Plot}'
+  xlabel : 'iterations $k$'
+  ylabel : 'residual $\|y^k - y^\star\|$'
+  logx : No
+  logy : No
+  axis_x_line : 'bottom'
+  axis_y_line : 'left'
+  legend_pos : 'south east'
+  # series_names: ['First', 'Second']
+  draw_legend : No 
+
+series:
+  - type : raw
+    data : npz_to_plot.npz
+    xseries : iters
+    yseries : residuals 
+    color : orange
+    marker : 'x'
+
